@@ -1,9 +1,9 @@
 import React from "react";
-import Counter from "./Counter";
-import Profile from "./Profile";
+import UserProfile from "./components/Api/UserProfile";
+import DelayedToggle from "./components/DelayedToggle/DelayedToggle";
 
 const App = () => {
-  return <Counter />;
+  return <UserProfile id={1} />;
 };
 
 export default App;
