@@ -16,11 +16,13 @@ const TodoItem = ({ todo, onToggle, onRemove }: ITodoItem) => {
         style={{
           textDecoration: done ? "line-through" : "none",
         }}
-        onClick={() => onToggle && onToggle(id)}
+        onClick={toggle}
       >
         {text}
       </span>
-      <button onClick={() => onRemove && onRemove(id)}>삭제</button>
+      <button onClick={remove} data-testid={`delete-${id}`}>
+        삭제
+      </button>
     </li>
   );
 };
